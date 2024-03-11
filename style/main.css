@@ -48,8 +48,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 100%;
-    width: 375px; */
 }
 
 /* ------ Fylo ------ */
@@ -183,18 +181,7 @@ main {
     margin-left: 10px;
 }
 
-/* .pop-up_arrow{
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 0px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 50px solid blue;
-    transform: rotate(180deg);
-    top: -100px;
-    left: 50%;
-    margin-left: -10px;
-} */
+
 
 /* -------- Attribution -------- */
 .attribution {
@@ -213,6 +200,58 @@ main {
 }
 
 /* ------ Responsivo ------ */
-/* @media only screen and (min-width: 1150px) {
+@media only screen and (min-width: 930px) {
+    body {
+        background-image: url(../images/bg-desktop.png);
+        background-size: 100% 425px;
+        background-position: bottom;
+    }
 
-} */
+    .container {
+        flex-direction: row;
+    }
+
+    .storage {
+        width: 540px;
+        margin: 50px 0 0 30px;
+    }
+
+    .storage .text{
+        margin-right: 230px;
+    }
+
+    .storage .guage {
+        width: 460px;
+    }
+
+    .storage .guage .count {
+        width: 340px;
+    }
+
+    .storage .guage .circle {
+        left: 328px;
+    }
+
+    .storage .gb{
+        width: 460px;
+    }
+
+    .pop-up .pop-up_balloon {
+        height: 75px;
+        top: -115px;
+        left: 50px;
+        border-radius: 10px 10px 0 10px;
+    }
+
+    .pop-up_arrow{
+        position: absolute;
+        width: auto;
+        height: auto;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid white;
+        transform: rotate(180deg);
+        top: 75px;
+        left: 160px;
+    }
+
+}
