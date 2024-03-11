@@ -1,41 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     /* ------ Color Primary ------ */
-    --moderate-violet: hsl(263, 55%, 52%);
-    --very-dark-grayish-blue: hsl(217, 19%, 35%);
-    --very-dark-blackish-blue: hsl(219, 29%, 14%);
-    --white: hsl(0, 0%, 100%);
+    --gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 
     /* ------ Color Neutral ------ */
-    --light-gray: hsl(0, 0%, 81%);
-    --light-grayish-blue: hsl(210, 46%, 95%);
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
 
     /* -------- Attribution -------- */
     --color-attribution: hsl(228, 45%, 44%);
 
     /* ------ Font ------ */
-    --font-medium: 500;
-    --font-semiBold: 600;
-    --font-barlow: "Barlow Semi Condensed", sans-serif;
-    --font-size: 13px;
+    --font-regular: 400;
+    --font-Bold: 700;
+    --font-raleway: "Raleway", sans-serif;
+    --font-size: 14px;
 }
 
 
 /* ------ Principal ------ */
 body {
-    background: var(--light-grayish-blue);
-    font-family: var(--font-barlow);
+    background: var(--very-dark-blue);
+    font-family: var(--font-raleway);
     font-size: var(--font-size);
-    font-weight: var(--font-medium);
-    color: var(--white);
+    font-weight: var(--font-regular);
+    font-style: normal;
+    color: var(--pale-blue);
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     width: 100vw;
 }
 
@@ -44,107 +48,153 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 375px;
+    /* height: 100%;
+    width: 375px; */
 }
 
-/* ------ card ------ */
-
-.card {
-    border-radius: 10px;
-    width: 330px;
+/* ------ Fylo ------ */
+.fylo {
+    background-color: var(--dark-blue);
+    width: 340px;
+    height: 210px;
+    border-radius: 15px 100px 15px 15px;
 }
 
-.card .text {
-    padding: 0 38px;
+.fylo_logo {
+    margin: 40px 0 0 40px;
 }
 
-.card .text p {
-    opacity: 70%;
-    padding-top: 20px;
-    line-height: 16px;
+.fylo_logo img {
+    background-size: cover;
+    height: 40px;
+    width: 135px;
 }
 
-.card .text span {
-    text-align: left;
-    line-height: 25px;
-    font-size: 20px;
-    font-weight: var(--font-semiBold);
-}
-
-.card img {
-    border-radius: 100%;
-    height: 30px;
-    width: 30px;
-}
-
-.card-3,
-.card-5 {
-    color: var(--very-dark-grayish-blue);
-}
-
-/* ------ card presentation ------ */
-.card .presentation {
+.fylo_file {
     display: flex;
     flex-direction: row;
+    gap: 15px;
+    margin: 35px 0 0 40px;
+}
+
+.fylo_file div {
+    background-color: var(--very-dark-blue);
+    height: 48px;
+    width: 48px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 25px 0 20px 30px;
 }
 
-.card .name {
-    margin-left: 15px;
+.fylo_file img {
+    width: 25px;
+    height: auto;
 }
 
-.card .name sub {
-    font-size: 11px;
-    opacity: 50%;
+/* ------ Storage ------ */
+.storage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-blue);
+    width: 340px;
+    height: 160px;
+    border-radius: 15px;
+    margin-top: 16px;
 }
 
-/* ------ card 1-2-3-4-5 v2------ */
-.card-1 {
-    background-color: var(--moderate-violet);
-    height: 450px;
-    margin: 70px 22.5px 30px;
-    background-image: url(../images/bg-pattern-quotation.svg);
-    background-repeat: no-repeat;
-    background-position: calc(100% - 25px) 0;
+/* ------ Tect ------ */
+.storage .text {
+    margin: 35px 0 16px 0;
 }
 
-.card-1 .text p {
-    opacity: 50%;
+.storage .text span {
+    font-weight: var(--font-Bold);
 }
 
-.card-2 {
-    background-color: var(--very-dark-grayish-blue);
-    height: 240px;
-    margin: 30px 22.5px;
+/* ------ Guage ------ */
+.storage .guage {
+    position: relative;
+    height: 18px;
+    width: 260px;
+    background-color: var(--very-dark-blue);
+    border-radius: 10px;
 }
 
-.card-3 {
-    background-color: var(--white);
-    height: 230px;
-    margin: 30px 22.5px;
+.storage .guage .count {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 14px;
+    width: 195px;
+    background: var(--gradient);
+    border-radius: 16px;
 }
 
-.card-4 {
-    background-color: var(--very-dark-blackish-blue);
-    height: 380px;
-    margin: 30px 22.5px;
+.storage .guage .circle {
+    position: absolute;
+    top: 3px;
+    left: 183px;
+    height: 12px;
+    width: 12px;
+    background: var(--pale-blue);
+    border-radius: 50%;
 }
 
-.card-5 {
-    background-color: var(--white);
-    height: 450px;
-    margin: 0px 22.5px 70px;
+/* ------ GB ------ */
+.storage .gb {
+    width: 260px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-weight: var(--font-Bold);
 }
 
-.card-1,
-.card-2,
-.card-3,
-.card-4,
-.card-5 {
-    box-shadow: 20px 20px 50px rgba(153, 153, 153, 0.4);
+/* ------ Pop-up ------ */
+.pop-up {
+    position: relative;
 }
+
+.pop-up .pop-up_balloon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 80px;
+    width: 180px;
+    background-color: white;
+    border-radius: 10px;
+    top: 60px;
+    left: -89px;
+}
+
+.pop-up .pop-up_balloon b {
+    font-size: 36px;
+    font-weight: var(--font-Bold);
+    color: var(--very-dark-blue);
+}
+
+.pop-up .pop-up_balloon p {
+    text-transform: uppercase;
+    font-weight: var(--font-Bold);
+    color: var(--grayish-blue);
+    margin-left: 10px;
+}
+
+/* .pop-up_arrow{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid blue;
+    transform: rotate(180deg);
+    top: -100px;
+    left: 50%;
+    margin-left: -10px;
+} */
 
 /* -------- Attribution -------- */
 .attribution {
@@ -155,7 +205,7 @@ main {
     width: 100%;
     bottom: 0.5rem;
     font-size: 0.7rem;
-    color: gray;
+    color: var(--pale-blue);
 }
 
 .attribution a {
@@ -163,54 +213,6 @@ main {
 }
 
 /* ------ Responsivo ------ */
-@media only screen and (min-width: 1150px) {
-    main {
-        height: 100vh;
-    }
+/* @media only screen and (min-width: 1150px) {
 
-    .container{
-        flex-direction: row;
-        height: 585px;
-        width: 1150px;
-    }
-
-    .card .text p {
-        line-height: 18px;
-    }
-
-    .block-upper, .block-lower{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .card-1{
-        height: 290px;
-        width: 550px;
-        margin: 0 15px 12.5px 0;
-        background-position: calc(100% - 90px) 0;
-    }
-
-    .card-2{
-        height: 290px;
-        width: 260px;
-        margin: 0 20px 12.5px;
-    }
-
-    .card-3{
-        height: 270px;
-        width: 260px;
-        margin: 12.5px 15px 0 0 ;
-    }
-
-    .card-4{
-        height: 270px;
-        width: 555px;
-        margin: 12.5px 20px 0 15px;
-    }
-
-    .card-5{
-        height: 585px;
-        width: 260px;
-        margin: 0 0 0 20px;
-    }
-}
+} */
